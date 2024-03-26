@@ -1,0 +1,254 @@
+<!-- Created by Ashish -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="weather-icon.png">
+  <title>Weather App</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="right">
+      <!-- search bar -->
+      <section class="search-Bar">
+        <div class="group">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="icon">
+            <g>
+              <path
+                d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
+              </path>
+            </g>
+          </svg>
+          <input class="input" type="search" id="inputValue" placeholder="Search foe place" />
+        </div>
+        <button id="search">search</button>
+      </section>
+      <!-- search bar -->
+      <div class="content">
+        <img  id="weatherIcon">
+        <h1 id="cityName"></h1><br><br>
+        <div class="temp">
+          <h1 id="temp">°C</h1>
+        </div>
+        <h2 id="detail"></h2><br><br>
+        <div>
+          <h2 id="date">Today: </h2><br><br>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="left">
+      <h2>Forecast</h2>
+      <section class="forecast-section">
+        <div class="cardContainer">
+          <div class="card">
+            <p class="date" id="next-date1">Tomorrow</p>
+            <p class="weather" id="weatherdetail1"></p>
+            <svg class="weather" version="1.1" id="Layer_1" x="0px" y="0px" width="50px" height="50px"
+              viewBox="0 0 100 100" xml:space="preserve">
+              <image id="image1" width="130" height="130" x="0" y="0"></image>
+            </svg>
+            <p class="temp"><span id="temp1">32</span>°C</p>
+            <div class="minmaxContainer">
+              <div class="min">
+                <p class="minHeading">Min</p>
+                <p class="minTemp"><span id="mintemp1"></span>°C</p>
+              </div>
+              <div class="max">
+                <p class="maxHeading">Max</p>
+                <p class="maxTemp"><span id="maxtemp1"></span>°C</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cardContainer">
+          <div class="card">
+            <p class="date" id="next-date2"></p>
+            <p class="weather" id="weatherdetail2"></p>
+            <svg class="weather" version="1.1" id="Layer_1" x="0px" y="0px" width="50px" height="50px"
+              viewBox="0 0 100 100" xml:space="preserve">
+              <image id="image2" width="130" height="130" x="0" y="0"></image>
+            </svg>
+            <p class="temp"><span id="temp2"></span>°C</p>
+            <div class="minmaxContainer">
+              <div class="min">
+                <p class="minHeading">Min</p>
+                <p class="minTemp"><span id="mintemp2"></span>°C</p>
+              </div>
+              <div class="max">
+                <p class="maxHeading">Max</p>
+                <p class="maxTemp"><span id="maxtemp2"></span>°C</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cardContainer">
+          <div class="card">
+            <p class="date" id="next-date3"></p>
+            <p class="weather" id="weatherdetail3"></p>
+            <svg class="weather" version="1.1" id="Layer_1" x="0px" y="0px" width="50px" height="50px"
+              viewBox="0 0 100 100" xml:space="preserve">
+              <image id="image3" width="130" height="130" x="0" y="0"></image>
+            </svg>
+            <p class="temp"><span id="temp3"></span>°C</p>
+            <div class="minmaxContainer">
+              <div class="min">
+                <p class="minHeading">Min</p>
+                <p class="minTemp"><span id="mintemp3"></span>°C</p>
+              </div>
+              <div class="max">
+                <p class="maxHeading">Max</p>
+                <p class="maxTemp"><span id="maxtemp3"></span>°C</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cardContainer">
+          <div class="card">
+            <p class="date" id="next-date4"></p>
+            <p class="weather" id="weatherdetail4"></p>
+            <svg class="weather" version="1.1" id="Layer_1" x="0px" y="0px" width="50px" height="50px"
+              viewBox="0 0 100 100" xml:space="preserve">
+              <image id="image4" width="130" height="130" x="0" y="0"></image>
+            </svg>
+            <p class="temp"><span id="temp4"></span>°C</p>
+            <div class="minmaxContainer">
+              <div class="min">
+                <p class="minHeading">Min</p>
+                <p class="minTemp"><span id="mintemp4"></span>°C</p>
+              </div>
+              <div class="max">
+                <p class="maxHeading">Max</p>
+                <p class="maxTemp"><span id="maxtemp4"></span>°C</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+    <section>
+      <h1>Today's Highlights</h1><br>
+      <section class="layout">
+        <div class="cards">
+          <h2 class="title">Wind Speed</h2>
+          <div class="value" id="wind-speed"></div>
+        </div>
+        <div class="cards">
+          <h2 class="title">Humidity</h2>
+          <div class="value" id="Humidity"></div>
+        </div>
+        <div class="cards">
+          <h2 class="title">Visibility</h2>
+          <div class="value" id="Visibility"></div>
+        </div>
+        <div class="cards">
+          <h2 class="title">UV Index</h2>
+          <div class="value" id="uv-index"></div>
+        </div>
+      </section>
+    </section>
+  </div></div>
+  <script>
+    const apiKey = "0ae4e603074545c581980930241403"; // Your API key
+var city = "Chandigarh"; // Initial city value
+
+let button = document.getElementById("search");
+let requestData; // Define requestData in a broader scope
+let er = document.getElementById("error");
+let weatherIcon = document.getElementById("weatherIcon");
+let cityName = document.getElementById("cityName");
+let temp_c = document.getElementById("temp");
+let detail = document.getElementById("detail");
+let windSpeed = document.getElementById("wind-speed");
+let humidity = document.getElementById("Humidity");
+let Visibility = document.getElementById("Visibility");
+let uvIndex = document.getElementById("uv-index");
+
+async function fetchWeatherData(cityName) {
+  try {
+    const response = await fetch(
+      `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${cityName}&days=5&aqi=yes&alerts=no`
+    );
+
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+
+    const data = await response.json();
+    requestData = data;
+  } catch (error) {
+    console.error("There was a problem with your fetch operation:", error);
+    showsnack(error); // Call showsnack function with the error message
+  }
+}
+
+function convertDate(inputdate) {
+  const outputDate = inputdate.toLocaleString("en-GB", {
+    weekday: "short",
+    day: "2-digit",
+    month: "short",
+  });
+  return outputDate;
+}
+
+function setDate(dateNumber, idName) {
+  let next_date = requestData.forecast.forecastday[dateNumber].date;
+  let date = new Date(next_date);
+  let formattedDate = convertDate(date);
+  document.getElementById(idName).innerText = formattedDate;
+}
+
+async function showWeather() {
+  var city = document.getElementById("inputValue").value || "Chandigarh"; 
+  await fetchWeatherData(city);
+
+  weatherIcon.setAttribute(
+    "src",
+    `https:${requestData.current.condition.icon}`
+  );
+  cityName.innerText = `${requestData.location.name}, ${requestData.location.country}`;
+  temp_c.innerText = `${requestData.current.temp_c}°C`;
+  detail.innerText = `${requestData.current.condition.text}`;
+
+  var d = new Date(requestData.location.localtime);
+  const inputdate = new Date(d);
+
+  const outputDate = inputdate.toLocaleString("en-GB", {
+    weekday: "short",
+    day: "2-digit",
+    month: "short",
+  });
+  document.getElementById("date").innerText = `Today: ${outputDate}`;
+  windSpeed.innerText = ` ${requestData.current.wind_kph} kph`;
+  humidity.innerText = `${requestData.current.humidity}%`;
+  Visibility.innerText = `${requestData.current.vis_km}KM`;
+  uvIndex.innerText = `${requestData.current.uv} `;
+
+  for (let i = 1; i < 5; i++) {
+    document.getElementById(`weatherdetail${i}`).innerText = requestData.forecast.forecastday[i].day.condition.text;
+    setDate(i, `next-date${i}`);
+    document.getElementById(`temp${i}`).innerText =requestData.forecast.forecastday[i].day.avgtemp_c;
+    document.getElementById(`image${i}`).setAttribute("href",`http:${requestData.forecast.forecastday[i].day.condition.icon}`);
+    document.getElementById(`mintemp${i}`).innerText =requestData.forecast.forecastday[i].day.mintemp_c;
+    document.getElementById(`maxtemp${i}`).innerText =requestData.forecast.forecastday[i].day.maxtemp_c;
+  }
+}
+const inputField = document.getElementById("inputValue");
+inputField.addEventListener("keypress", function(event) {
+  if (event.keyCode === 13 || event.which === 13) {
+    showWeather();
+  }
+});
+button.addEventListener("click", showWeather);
+window.addEventListener("load", showWeather);
+
+  </script>
+</body>
+
+</html>
