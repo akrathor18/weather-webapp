@@ -1,4 +1,4 @@
-const apiKey = "0ae4e603074545c581980930241403"; // Your API key
+const apiKey = ; // Your API key
 var city = "Chandigarh"; // Initial city value
 
 let button = document.getElementById("search");
